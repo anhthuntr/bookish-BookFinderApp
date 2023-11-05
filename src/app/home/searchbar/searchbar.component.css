@@ -1,0 +1,116 @@
+
+  input[type="text"] {
+    border: solid 1px var(--primary-color);
+    padding: 7px;
+    border-radius: 8px;
+    width: 300px;
+    height: 20px;
+    font-size: 15px;
+    margin-right: 1px;
+  }
+
+  button {
+    padding: 7px;
+    border: solid 1px var(--primary-color);
+    background-color: #576490;
+    color: white;
+    height: 35px;
+    width: 95px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .section {
+    margin-left: 150px;
+  }
+
+  .book-card {
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    height: 350px;
+    margin-top: 16px;
+    align-items: center;
+    padding: 5px;
+
+    .mat-card-title {
+      padding: 10px;
+      font-size: medium;
+      color: #576490;
+      font-weight: 600;
+    }
+
+    .mat-card-image {
+      margin: 0;
+      height: 100%;
+    }
+
+    .book-card-content {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      & > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: auto;
+        max-width: 70%;
+
+        &:first-child {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+
+        &:last-child {
+          flex-direction: column;
+          align-items: start;
+          padding: 8px;
+        }
+      }
+    }
+  }
+
+  
+
+  .home-card {
+    border-radius: 4px;
+    width: 500px;
+
+    .mat-card-image {
+      margin: 0;
+      height: 100%;
+    }
+
+    .mat-card-title {
+      padding: 10px;
+      font-size: medium;
+      color: #576490;
+    }
+
+    .home-card-content {
+      display: flex;
+      justify-content: space-between;
+
+      & > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: auto;
+        max-width: 70%;
+
+        &:first-child {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+
+        &:last-child {
+          flex-direction: column;
+          align-items: start;
+          padding: 8px;
+        }
+      }
+    }
+}
+  

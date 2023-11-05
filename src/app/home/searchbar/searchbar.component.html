@@ -1,0 +1,53 @@
+<!-- Search Bar -->
+<div style="margin-bottom: 25px">
+  <div class="section">
+      <input 
+          [(ngModel)]="searchQuery" 
+          type="text" 
+          placeholder="Type title, author..." 
+          (keyup.enter)="getBook(searchQuery)">
+       <button (click)="getBook(searchQuery)">Search</button>
+       <div *ngIf="loading">
+        <p>Loading...</p>
+      </div>
+      {{ error }}
+  </div>
+</div>
+
+<!-- Results -->
+<div 
+  fxLayout="row wrap" 
+  fxLayout.lt-sm="column" 
+  fxLayoutGap="16px" 
+  fxLayoutAlign="flex-start stretch"
+  >
+	<div *ngFor="let book of books"
+      fxFlex="0 1 calc(33.3% - 32px)"
+      fxFlex.lt-md="0 1 calc(50% - 32px)"
+      fxFlex.lt-sm="100%">
+		<div class="book-card">
+      <mat-card-title class="mat-card-title">
+        <a [href]="book.volumeInfo.infoLink" target="_blank">
+        {{ book.volumeInfo.title }}
+        </a>
+      </mat-card-title>
+    <div class="book-card-content">
+        <img mat-card-image 
+        [src]="book.volumeInfo.imageLinks.thumbnail" alt="Book Cover">
+      <div>
+        <div>
+          <p><b>Authors:</b> {{ book.volumeInfo.authors.join(', ') }}</p>
+        </div>
+        <div>
+          <p><b>Publisher:</b> {{ book.volumeInfo.publisher }}</p>
+        </div>
+        <div>
+          <p><b>Published Date:</b> {{ book.volumeInfo.publishedDate }}</p>
+        </div>
+        <div>
+          <p><b>Average Rating:</b> {{ book.volumeInfo.averageRating }}</p>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>

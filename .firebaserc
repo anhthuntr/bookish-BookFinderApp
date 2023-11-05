@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bookish-2c86e": {
+      "hosting": {
+        "bookish": [
+          "bookish-2c86e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bookish-2c86e"
+  }
+}

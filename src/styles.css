@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html,
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #c9cad9;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #576490;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+      width: 100%;
+    }
+  }
